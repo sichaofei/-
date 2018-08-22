@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/sy/sy",
+      "pages/fl/fl",
+    "pages/my/my",
+    "pages/list/list",
+    "pages/shop/shop"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "盒马生鲜",
+    "navigationBarTextStyle":"black",
+    "navigationBarBackgroundColor":"#0EB6FF",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#a1a1a1",
+    "selectedColor": "#2af8ff",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "#e0e0e0",
+    "list": [
+      {
+        "pagePath": "pages/sy/sy",
+        "iconPath": "./assets/icons/hema.png",
+        "selectedIconPath": "./assets/icons/hema-sel.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/fl/fl",
+        "iconPath": "./assets/icons/sort.png",
+        "selectedIconPath": "./assets/icons/sort-sel.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "iconPath": "./assets/icons/shopping.png",
+        "selectedIconPath": "./assets/icons/shopping-sel.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "./assets/icons/mine.png",
+        "selectedIconPath": "./assets/icons/mine-sel.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

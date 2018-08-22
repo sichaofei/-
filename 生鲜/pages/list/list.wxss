@@ -1,0 +1,53 @@
+/* pages/list/list.wxss */
+.list{
+  width:100%;
+    font-size:30rpx;
+}
+.list .head{
+  height:100rpx;
+line-height:100rpx;
+  width:100%;
+  position: relative;
+  text-align: center;
+  border-bottom:1px solid #ECECEC;
+}
+.head image{
+  width:40rpx;
+  height:40rpx;
+  position: absolute;
+  top:30rpx;
+  right:30rpx;
+  z-index: 10
+}
+.con>view{
+  width:95%;
+  margin:20rpx auto;
+  display: flex;
+  padding:20rpx 0rpx;
+  border-bottom: 1px solid #ECECEC;
+}
+.con>view .left{
+  width:40%;
+}
+.con>view .right{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width:60%;
+}
+.con>view .left image{
+  width:250rpx;
+  height:250rpx;
+}
+.con>view .right .rightFt{
+  display: flex;
+  justify-content: space-between;
+}
+.con>view .right .rightFt text:nth-child(1){
+  color: orangered;
+}
+.con>view .right .rightFt text:nth-child(2){
+  color:#0EB6FF;
+  font-size:40rpx;
+  font-weight:800;
+}

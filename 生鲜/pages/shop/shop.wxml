@@ -1,0 +1,40 @@
+<!--pages/shop/shop.wxml-->
+<view class="shop">
+  <view class="head">
+    购物车
+    <text bindtap='remove'>删除</text>
+  </view>
+  <view class="con">
+    <view wx:for="{{list}}" wx:key="{{index}}">
+      <view class="left">
+        <icon type="{{item.type}}" color="#0EB6FF" bindtap='selected' data-index="{{index}}"></icon>
+        <image src="{{item.image}}"></image>
+      </view>
+      <view class="right">
+        <view>{{item.name}}</view>
+        <view class="rightFt">
+          <view>￥{{item.price}}/{{item.unit}}</view>
+          <view>
+            <view class="boc">
+              <text data-item="{{item}}" bindtap='reduce'>-</text>
+              <text>{{item.count}}</text>
+              <text bindtap='add' data-item="{{item}}">+</text> </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="foot">
+    <view class="left">
+      <icon type="{{allSelected}}" color="#0EB6FF" bindtap='allChange'></icon>
+      全选
+    </view>
+    <view class="center">
+      合计:
+      <text>￥{{zj}}</text>
+    </view>
+    <view class="right">
+      去结算
+    </view>
+  </view>
+</view>

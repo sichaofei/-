@@ -1,0 +1,15 @@
+<!--pages/fl/fl.wxml-->
+<view class="fl">
+<view class="head"> 
+分类
+</view>
+<view class="banner">
+  <image src="https://gw.alicdn.com/tfs/TB1msQKc5qAXuNjy1XdXXaYcVXa-750-291.jpg_Q90.jpg" model="aspectFit"></image>
+</view>
+<view class="con">
+<view wx:for="{{sorts}}" wx:key="{{index}}" bindtap='golist' data-index="{{index}}">
+<image src="{{item.imageSrc}}"></image>
+<text>{{item.text}}</text>
+</view>
+</view>
+</view>

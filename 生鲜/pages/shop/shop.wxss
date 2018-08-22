@@ -1,0 +1,115 @@
+/* pages/shop/shop.wxss */
+.shop{
+  width:100%;
+  font-size:30rpx;
+}
+
+.head{
+  width:100%;
+  text-align: center;
+  height:100rpx;
+  line-height: 100rpx;
+  position: relative;
+   border-bottom: 1px solid #ECECEC;
+}
+.head text{
+  position: absolute;
+  right:20rpx;
+  top:5rpx;
+  color:#ccc;
+}
+.con{
+width:100%;
+}
+.con>view{
+  width:100%;
+  display: flex;
+  border-bottom:1px solid #ECECEC;
+  padding:20rpx 0rpx;
+  margin:20rpx 0rpx;
+}
+.con>view .left{
+  width:30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.con>view .left image{
+  width:120rpx;
+  height:120rpx;
+  margin-left:20rpx;
+}
+.con >view .right{
+  width:70%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.rightFt{
+  display: flex;
+  width:100%;
+}
+.rightFt view{
+  width:50%;
+ 
+}
+.rightFt view:nth-child(1){
+  color:orangered;
+}
+.rightFt view:nth-child(2) .boc{
+  border:1px solid #ECECEC;
+  display: inline-block;
+  border-radius: 7rpx;
+  width:75%;
+}
+.boc text{
+  color:black;
+  text-align: center;
+  border-right:1px solid #ECECEC;
+  width:50rpx;
+  height:50rpx;
+  line-height: 50rpx;
+  display: inline-block;
+}
+.boc text:nth-child(2){
+  width:80rpx;
+  text-align: center;
+}
+.boc text:nth-child(3){
+  border:0;
+}
+
+.foot{
+  background: white;
+  z-index: 5;
+  border-top:1px solid #ccc;
+  height:100rpx;
+  position: fixed;
+  bottom:0;
+  display: flex;
+  width:100%;
+}
+.foot view{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.foot .left{
+  width:20%;
+}
+.foot .right{
+  color:white;
+  width:30%;
+  background: #0EB6FF;
+}
+.foot .center{
+  justify-content: flex-end;
+  margin-right:20rpx;
+  width:50%;
+  color:#ccc;
+  font-size:25rpx;
+}
+.foot .center text{
+  margin:0 30rpx;
+  color:orangered;
+}

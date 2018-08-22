@@ -1,0 +1,82 @@
+<!--pages/sy/sy.wxml-->
+<view class="sy" >
+<view class="head">
+<view class="left">
+ <image src="../../assets/icons/position.png"  model="widthFix" bindtap='address'/>
+</view>
+<view class="center">
+<input></input>
+ <image src="../../assets/icons/search.png" placeholder="奇异果" value="奇异果"/>
+</view>
+<view class="right">
+<image src="../../assets/icons/scan.png" bindtap='camera'  model="widthFix"/>
+</view>
+</view>
+<view class="banner">
+      <swiper  indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#0EB6FF" autoplay="true" current="{{syCurrent}}" bindchange="syBian">
+     <swiper-item>
+        <image model="aspectFit" class="page__scroll__item" src="https://gw.alicdn.com/tfs/TB1AoIXeLDH8KJjy1XcXXcpdXXa-750-291.jpg_Q90.jpg"/>
+      </swiper-item>
+      <swiper-item>
+         <image model="aspectFit" class="page__scroll__item" src="https://gw.alicdn.com/tfs/TB1AoIXeLDH8KJjy1XcXXcpdXXa-750-291.jpg_Q90.jpg"/>
+      </swiper-item>
+      <swiper-item>
+        <image model="aspectFit" class="page__scroll__item" src="https://img.alicdn.com/tfs/TB1OYB8elfH8KJjy1XbXXbLdXXa-750-291.jpg_Q90.jpg"/>
+      </swiper-item>
+      <swiper-item>
+        <image model="aspectFit" class="page__scroll__item" src="https://img.alicdn.com/tfs/TB1OYB8elfH8KJjy1XbXXbLdXXa-750-291.jpg_Q90.jpg"/>
+      </swiper-item>
+      <swiper-item>
+        <image model="aspectFit" class="page__scroll__item" src="https://gw.alicdn.com/tfs/TB1AoIXeLDH8KJjy1XcXXcpdXXa-750-291.jpg_Q90.jpg"/>
+      </swiper-item>
+</swiper>
+<view class="ul" >
+<text bindtap='syChange' class="{{syCurrent==0 ? 'active':''}}" data-index="0"></text>
+<text bindtap='syChange' class="{{syCurrent==1 ? 'active':''}}" data-index="1"></text>
+<text bindtap='syChange' class="{{syCurrent==2 ? 'active':''}}" data-index="2"></text>
+<text bindtap='syChange' class="{{syCurrent==3? 'active':''}}" data-index="3"></text>
+<text bindtap='syChange' class="{{syCurrent==4 ? 'active':''}}" data-index="4"></text>
+</view>
+</view>
+<view class="topSwiper">
+      <view class="left" > <image src="../../assets/icons/trumpet.png" /></view>
+      <view class="center">  <text>盒马云超市来啦！0门槛包邮！上海外环内可包邮到家</text></view>
+      <view class="right"> <a>1/1</a></view>
+</view>
+<view class="con">
+<view wx:for="{{list}}" wx:key="{{index}}" data-index="{{index}}" bindtap='goList'>
+<view style="background:#{{item.style}}"><image src="{{item.imgSrc}}"></image></view>
+<text>{{item.text}}</text>
+</view>
+</view> 
+<view class="good">
+  <view class="goodHead">
+    <view class="left">
+       <image src="../../assets/icons/crown.png" />
+       今日王牌大赏
+    </view>
+    <view class="right">
+    更多
+    <text></text>
+    </view>
+  </view> 
+  <view class="goodCon">
+    <swiper next-margin="60rpx">
+    <swiper-item wx:for="{{goods}}" wx:key="{{index}}">
+      <view class="goodSwiper">
+        <view class="left1">
+        <image src="{{item.image}}" model="aspectFit"></image>
+        </view>
+        <view class="right1">
+        <view>{{item.name}}</view>
+          <view><text>{{item.secName}}</text></view>
+          <view class="goodF"><a>{{item.leftTitle}}</a> <a>{{item.rightTitle}}</a></view>
+          <view class="goodF"><text>{{item.leftSecTitle}}</text><text>{{item.rightSecTitle}}</text></view>
+          <view class="goodF1"><a>￥{{item.price}}<text>/{{item.unit}}</text></a> <a class="jia" data-item="{{item}}" bindtap="addShop"> +</a> </view>
+        </view>
+      </view>
+    </swiper-item>
+</swiper>
+  </view>
+</view>
+</view>
